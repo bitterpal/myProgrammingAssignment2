@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-
-
-## Following function creates a cache enabled matrix from argument 'x', 
-##which is a numeric matrix. 'inverse' caches the inverse of the matrix
-##other functions as explained on sides
-
-=======
->>>>>>> 537a960cacb3dbd86312eb0951961e80068ed540
 makeCacheMatrix<-function(x=matrix()){   #function named according to instructions
   inverse<-NULL #for storing inverse when computed as cache
   setMatrix<-function(y){ #y:is a numeric matrix,to be saved into the variable 'x'
@@ -21,16 +12,6 @@ makeCacheMatrix<-function(x=matrix()){   #function named according to instructio
   list(setM=setMatrix,getM=getMatrix,getIn=getInverse,setIn=setInverse)#list of function, standard way of returning multiple functions from a closure
 }
 
-<<<<<<< HEAD
-
-
-##takes the list of functions returned by makeCacheMatrix as argument
-##if 'inverse' is NULL i.e. inverse has not already been computed, it 
-##is computed and result stored in cache 'inverse' otherwise the 
-##cached value in 'inverse' is returned
-
-=======
->>>>>>> 537a960cacb3dbd86312eb0951961e80068ed540
 cacheSolve<-function(matrixList,...){ #named according to instructions, takes previous function's return as argument
   inverse<-matrixList$getIn()#gets the saved inverse, if not computed yet, NULL is returned
   if(!is.null(inverse)){
@@ -44,15 +25,7 @@ cacheSolve<-function(matrixList,...){ #named according to instructions, takes pr
 }
 
 
-<<<<<<< HEAD
-
-
-
-
-#I have added a test case,just to make things easier. :)
-=======
 #I have added a test case,just to make things easier.
->>>>>>> 537a960cacb3dbd86312eb0951961e80068ed540
 
 temp<-list(12,23,34,45,65,65,45,23,43)
 testmatrix<-matrix(unlist(temp),3,3)#unlist used because solve only works on numeric matrices 
